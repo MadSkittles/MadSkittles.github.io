@@ -23,7 +23,7 @@
 首先，JS闭包的理解难点也是其特点在于，它可以把函数体内的局部变量维持住，使得在函数作用域外也能访问到。这和C和Java等静态语言的机制是很不一样的。
 我们先来一个简单的例子：
 123456789var scope = &quot;global scope&quot;; // 全局变量function checkscope()&amp;#123;	var s">
-<meta property="og:updated_time" content="2015-10-16T12:11:20.000Z">
+<meta property="og:updated_time" content="2015-10-16T14:54:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript闭包之个人拙见">
 <meta name="twitter:description" content="昨天研究了一下JS的闭包机制，大概整理了一下，记录在此，做个备忘。
@@ -112,7 +112,7 @@
 		
 		</div>
 		
-		<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="http://music.163.com/outchain/player?type=0&id=116684152&auto=1&height=90"></iframe><br>昨天研究了一下JS的闭包机制，大概整理了一下，记录在此，做个备忘。</p>
+		<p>昨天研究了一下JS的闭包机制，大概整理了一下，记录在此，做个备忘。</p>
 <p>首先，JS闭包的理解难点也是其特点在于，它可以把函数体内的局部变量维持住，使得在函数作用域外也能访问到。这和<em>C</em>和<em>Java</em>等静态语言的机制是很不一样的。</p>
 <p>我们先来一个简单的例子：</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">"global scope"</span>; <span class="comment">// 全局变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkscope</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> scope = <span class="string">"local scope"</span>; <span class="comment">// 局部变量</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">f</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> scope;&#125; <span class="comment">// 在作用域内返回这个值</span></span><br><span class="line">	<span class="keyword">return</span> f; <span class="comment">// 如果返回的是f()，结果会是神马？</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">checkscope()(); <span class="comment">// "local scope"</span></span><br></pre></td></tr></table></figure>
