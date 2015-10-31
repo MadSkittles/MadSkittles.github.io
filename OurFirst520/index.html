@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Our Love Story</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="style/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="style/jquery.js"></script>
+    <script type="text/javascript" src="style/garden.js"></script>
+    <script type="text/javascript" src="style/functions.js"></script>
+</head>
+
+<body>
+<iframe style="display:none" src="http://music.163.com/outchain/player?type=2&id=28949444&auto=1&height=32"></iframe>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">2015年4月28日</span><br />
+                <span class="comments">火车把你送到了我的城市......</span><br />
+                <span class="comments">2015年4月29日</span><br />
+                <span class="comments">你又离开了这里......</span><br />
+                <span class="comments">但我们的故事没有结束......</span><br />
+                <span class="comments">2015年4月30日</span><br />
+                <span class="comments">我依然记得那时你温柔的声音......</span><br />
+                <span class="comments">我们的故事开启了第二章......</span><br />
+                <span class="comments">............................</span><br /><br />
+                <span class="keyword">但是......</span><br />
+                <span class="keyword">我做的真的很差劲......</span><br />
+                <span class="keyword">我总是麻烦缠身，让一堆事情挡在我去见你的路上......</span><br />
+                <span class="keyword">即使在你孤单的时候，我能做的也仅仅是给你打电话......</span><br />
+                <span class="keyword">我也是那么迟钝，让你感觉不到我对你的关心......</span><br />
+                <span class="keyword">............................</span><br /><br />
+                <span class="string">其实......</span><br />
+                <span class="string">我只是还没准备好以我的方式让你知道我的心......</span><br />
+                <span class="string">谢谢你对我的理解，虽然我知道你的小脾气......</span><br />
+                <span class="string">请不要总是让我随意......</span><br />
+                <span class="string">也不要总是让我揍开......</span><br />
+                <span class="string">因为我真的很想和你走下去......</span><br />
+                <span class="string">............................</span><br />
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        顾静瑜，我们已经在一起
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        只属于你的怪人<br/>
+                        <div class="signature">- 李侃文</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } 
+        else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 10000);
+            
+         
+            var together = new Date(2015,3,30);
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 750);
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+</html>
