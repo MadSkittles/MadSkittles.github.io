@@ -1,0 +1,500 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>echarts配置方法 | Kevin&#39;s Black-Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Li Kanwen">
+    
+
+    
+    <meta name="description" content="好久没来更新博客~忙死忙死……最近稍微有点空了补更补更~~😊😊
+最近在研究echarts，发现网上的配置帖中的配置方法有点过时，所以我也来写一篇，记录下echarts的配置方法。
+首先去百度echarts官网下载echarts，解压后找到以下几个文件和文件夹：
+1234echarts-2.2.7/build/dist/echarts.jsecharts-2.2.7/build/dist/cha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="echarts配置方法">
+<meta property="og:url" content="http://yoursite.com/2015/11/27/echarts1/index.html">
+<meta property="og:site_name" content="Kevin's Black-Tech">
+<meta property="og:description" content="好久没来更新博客~忙死忙死……最近稍微有点空了补更补更~~😊😊
+最近在研究echarts，发现网上的配置帖中的配置方法有点过时，所以我也来写一篇，记录下echarts的配置方法。
+首先去百度echarts官网下载echarts，解压后找到以下几个文件和文件夹：
+1234echarts-2.2.7/build/dist/echarts.jsecharts-2.2.7/build/dist/cha">
+<meta property="og:updated_time" content="2015-11-27T13:32:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="echarts配置方法">
+<meta name="twitter:description" content="好久没来更新博客~忙死忙死……最近稍微有点空了补更补更~~😊😊
+最近在研究echarts，发现网上的配置帖中的配置方法有点过时，所以我也来写一篇，记录下echarts的配置方法。
+首先去百度echarts官网下载echarts，解压后找到以下几个文件和文件夹：
+1234echarts-2.2.7/build/dist/echarts.jsecharts-2.2.7/build/dist/cha">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Kevin&#39;s Black-Tech" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Kevin&#39;s Black-Tech" title="Kevin&#39;s Black-Tech"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Kevin&#39;s Black-Tech">Kevin&#39;s Black-Tech</a></h1>
+				<h2 class="blog-motto">Home&#39;s behind and the world ahead.</h2>
+			</div>
+			<div id="clock">
+				<script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">关于 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/11/27/echarts1/" title="echarts配置方法" itemprop="url">echarts配置方法</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Li Kanwen" target="_blank" itemprop="author">Li Kanwen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-11-27T12:09:49.000Z" itemprop="datePublished"> 发表于 2015-11-27</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>好久没来更新博客~忙死忙死……最近稍微有点空了补更补更~~😊😊</p>
+<p>最近在研究echarts，发现网上的配置帖中的配置方法有点过时，所以我也来写一篇，记录下echarts的配置方法。</p>
+<p>首先去百度echarts官网下载echarts，解压后找到以下几个文件和文件夹：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echarts-<span class="number">2.2</span><span class="number">.7</span>/build/dist/echarts.js</span><br><span class="line">echarts-<span class="number">2.2</span><span class="number">.7</span>/build/dist/chart</span><br><span class="line">echarts-<span class="number">2.2</span><span class="number">.7</span>/doc/example/theme</span><br><span class="line">echarts-<span class="number">2.2</span><span class="number">.7</span>/doc/asset/js/echartsConfig.js</span><br></pre></td></tr></table></figure>
+<p>将这些文件和文件放入一个文件夹作为echarts包（我将其命名为echarts，本文中讲到的echarts就是指这个包），我们新建一个工程，结构如下：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">demo</span><br><span class="line">   <span class="string">|--demo.html</span></span><br><span class="line">   <span class="string">|--js</span></span><br><span class="line">      <span class="string">|--jquery.min.js</span></span><br><span class="line">      <span class="string">|--echarts</span></span><br></pre></td></tr></table></figure>
+<p>接下来，重头戏来了，小二，上代码~~  来了您呐~~</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>ECharts-基本线性图及其配置要求<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span> <span class="attribute">style</span>=<span class="value">"text-align"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"main"</span> <span class="attribute">style</span>=<span class="value">"height: 400px; width:800px; border: 1px solid #ccc; padding: 10px;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/echarts/echarts.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">language</span>=<span class="value">"javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">        <span class="built_in">require</span>.config(&#123;</span><br><span class="line">            paths: &#123;</span><br><span class="line">                 echarts: <span class="string">'./js/echarts'</span>, <span class="comment">//echarts包的路径</span></span><br><span class="line">             &#125;</span><br><span class="line">         &#125;);</span><br><span class="line">        <span class="built_in">require</span>(</span><br><span class="line">            [</span><br><span class="line">            <span class="string">'echarts'</span>,</span><br><span class="line">            <span class="string">'echarts/theme/dark'</span>, <span class="comment">//需要使用的theme，如果不需要可以省略</span></span><br><span class="line">            <span class="string">'echarts/chart/line'</span></span><br><span class="line">            ],</span><br><span class="line">        <span class="comment">//回调函数</span></span><br><span class="line">        <span class="comment">//渲染ECharts图表</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> (<span class="params">ec,theme</span>) </span>&#123;  <span class="comment">//如不使用theme，可以省略theme参数，ec.init也可以省略</span></span><br><span class="line">            <span class="comment">//图表渲染的容器对象</span></span><br><span class="line">            <span class="keyword">var</span> chartContainer = <span class="built_in">document</span>.getElementById(<span class="string">"main"</span>);</span><br><span class="line">            <span class="comment">//加载图表</span></span><br><span class="line">            <span class="keyword">var</span> myChart = ec.init(chartContainer,theme);</span><br><span class="line">            option = &#123;</span><br><span class="line">                tooltip : &#123;</span><br><span class="line">                    trigger: <span class="string">'axis'</span></span><br><span class="line">                &#125;,</span><br><span class="line">                legend: &#123;</span><br><span class="line">                    data:[<span class="string">'邮件营销'</span>,<span class="string">'联盟广告'</span>,<span class="string">'视频广告'</span>,<span class="string">'直接访问'</span>,<span class="string">'搜索引擎'</span>]</span><br><span class="line">                &#125;,</span><br><span class="line">                toolbox: &#123;</span><br><span class="line">                    show : <span class="literal">true</span>,</span><br><span class="line">                    x: <span class="string">'right'</span>,</span><br><span class="line">                    orient: <span class="string">'vertical'</span>,</span><br><span class="line">                    feature : &#123;</span><br><span class="line">                        mark : &#123;show: <span class="literal">true</span>&#125;,</span><br><span class="line">                        dataView : &#123;show: <span class="literal">true</span>, readOnly: <span class="literal">false</span>&#125;,</span><br><span class="line">                        magicType : &#123;show: <span class="literal">true</span>, type: [<span class="string">'line'</span>, <span class="string">'bar'</span>, <span class="string">'stack'</span>, <span class="string">'tiled'</span>]&#125;,</span><br><span class="line">                        restore : &#123;show: <span class="literal">true</span>&#125;,</span><br><span class="line">                        saveAsImage : &#123;show: <span class="literal">true</span>&#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                calculable : <span class="literal">true</span>,</span><br><span class="line">                xAxis : [</span><br><span class="line">                &#123;</span><br><span class="line">                    type : <span class="string">'category'</span>,</span><br><span class="line">                    boundaryGap : <span class="literal">false</span>,</span><br><span class="line">                    data : [<span class="string">'周一'</span>,<span class="string">'周二'</span>,<span class="string">'周三'</span>,<span class="string">'周四'</span>,<span class="string">'周五'</span>,<span class="string">'周六'</span>,<span class="string">'周日'</span>]</span><br><span class="line">                &#125;</span><br><span class="line">                ],</span><br><span class="line">                yAxis : [</span><br><span class="line">                &#123;</span><br><span class="line">                    type : <span class="string">'value'</span></span><br><span class="line">                &#125;</span><br><span class="line">                ],</span><br><span class="line">                series : [</span><br><span class="line">                &#123;</span><br><span class="line">                    name:<span class="string">'邮件营销'</span>,</span><br><span class="line">                    type:<span class="string">'line'</span>,</span><br><span class="line">                    stack: <span class="string">'总量'</span>,</span><br><span class="line">                    data:[<span class="number">120</span>, <span class="number">132</span>, <span class="number">101</span>, <span class="number">134</span>, <span class="number">90</span>, <span class="number">230</span>, <span class="number">210</span>]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    name:<span class="string">'联盟广告'</span>,</span><br><span class="line">                    type:<span class="string">'line'</span>,</span><br><span class="line">                    stack: <span class="string">'总量'</span>,</span><br><span class="line">                    data:[<span class="number">220</span>, <span class="number">182</span>, <span class="number">191</span>, <span class="number">234</span>, <span class="number">290</span>, <span class="number">330</span>, <span class="number">310</span>]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    name:<span class="string">'视频广告'</span>,</span><br><span class="line">                    type:<span class="string">'line'</span>,</span><br><span class="line">                    stack: <span class="string">'总量'</span>,</span><br><span class="line">                    data:[<span class="number">150</span>, <span class="number">232</span>, <span class="number">201</span>, <span class="number">154</span>, <span class="number">190</span>, <span class="number">330</span>, <span class="number">410</span>]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    name:<span class="string">'直接访问'</span>,</span><br><span class="line">                    type:<span class="string">'line'</span>,</span><br><span class="line">                    stack: <span class="string">'总量'</span>,</span><br><span class="line">                    data:[<span class="number">320</span>, <span class="number">332</span>, <span class="number">301</span>, <span class="number">334</span>, <span class="number">390</span>, <span class="number">330</span>, <span class="number">320</span>]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    name:<span class="string">'搜索引擎'</span>,</span><br><span class="line">                    type:<span class="string">'line'</span>,</span><br><span class="line">                    stack: <span class="string">'总量'</span>,</span><br><span class="line">                    data:[<span class="number">820</span>, <span class="number">932</span>, <span class="number">901</span>, <span class="number">934</span>, <span class="number">1290</span>, <span class="number">1330</span>, <span class="number">1320</span>]</span><br><span class="line">                &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;;</span><br><span class="line">            myChart.setOption(option);</span><br><span class="line">        &#125;);</span><br><span class="line">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> marginWidth = $(<span class="string">'body'</span>).width() - $(<span class="string">'#main'</span>).width();</span><br><span class="line">            <span class="keyword">var</span> marginLeft=marginWidth / <span class="number">2</span>;</span><br><span class="line">            $(<span class="string">'#main'</span>).css(<span class="string">'margin-left'</span>, marginLeft);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意，代码中的<code>echarts: &#39;./js/echarts&#39;</code>指的是echarts包所在的位置，而<code>[&#39;echarts&#39;,&#39;echarts/theme/dark&#39;, &#39;echarts/chart/line&#39;]</code>中的echarts则是指引入包得变量名。在配置echarts中最重要的就是<code>option</code>了，<code>option</code>的中配置项可以查看<a href="http://echarts.baidu.com/doc/option.html" target="_blank" rel="external"><em>echarts配置项查找工具</em></a>。</p>
+<p>好啦，今天就讲这么多~~ 下一次我们再来讲echarts点击事件~~ 拜拜，债见~</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/echarts/">echarts</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/echarts/">echarts</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/11/27/echarts1/" data-title="echarts配置方法 | Kevin&#39;s Black-Tech" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/10/16/JS-bibao-2015-10-16/"  title="JavaScript闭包之个人拙见">
+ <strong>下一篇：</strong><br/> 
+ <span>JavaScript闭包之个人拙见
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/11/27/echarts1/" data-title="echarts配置方法" data-url="http://yoursite.com/2015/11/27/echarts1/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/echarts/" title="echarts">echarts<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">2</span></li></ul>
+  </div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/JavaScript闭包/" style="font-size: 10px;">JavaScript闭包</a> <a href="/tags/echarts/" style="font-size: 10px;">echarts</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://abbeychenxi.net" target="_blank" title="Chen Xi&#39;s Blog">Chen Xi&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://misok.github.io" target="_blank" title="Ma Qianwen&#39;s Blog">Ma Qianwen&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+<div id="MusicPlayer" style="max-height: 50px;">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=100% src="http://music.163.com/outchain/player?type=0&id=116684152&auto=1&height=32"></iframe>
+<div>
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> I am Li Kanwen, I am a NJUer. <br/>
+			Welcome to my black-tech zone.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3027936487" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/MadSkittles" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:likanwen@icloud.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Li Kanwen">Li Kanwen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"likanwen"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc7e776ee983020e6b1d222f4839372e' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
