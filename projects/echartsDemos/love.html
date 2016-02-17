@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ECharts-基本线性图及其配置要求</title>
+</head>
+<body style="text-align">
+    <div id="main" style="height: 720px; width:800px; border-radius: 10px; padding: 10px;">
+    </div>
+    <script src="./js/echarts/echarts.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        require.config({
+            paths: {
+                 echarts: './js/echarts', //echarts包的路径
+             }
+         });
+        function initTable(xA,y1,y2){
+            require(
+                [
+                'echarts',
+                'echarts/theme/dark', //需要使用的theme，如果不需要可以省略
+                'echarts/chart/line',
+                ],
+            //回调函数
+            //渲染ECharts图表
+           function (ec,theme) {  //如不使用theme，可以省略theme参数，ec.init也可以省略
+                //图表渲染的容器对象
+                var chartContainer = document.getElementById("main");
+                //加载图表
+                var myChart = ec.init(chartContainer,theme);
+                option = {
+                    title: {
+                        text: 'for 静瑜',
+                        x: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: xA
+                    }
+                    ],
+                    yAxis: [
+                    {
+                        type: 'value'
+                    }
+                    ],
+                    series: [
+                    {
+                        type:'line',
+                        itemStyle:{
+                            normal:{
+                                color: 'red'
+                            }
+                        },
+                        data:y1,
+                        symbol: 'none'
+                    },
+                    {
+                        type:'line',
+                        itemStyle:{
+                            normal:{
+                                color: 'red'
+                            }
+                        },
+                        data:y2,
+                        symbol: 'none'
+                    }
+                    ]
+                };
+                myChart.setOption(option);
+            });
+       }
+        $(function(){
+            var marginWidth = $('body').width() - $('#main').width();
+            var marginLeft = marginWidth / 2;
+            $('#main').css('margin-left', marginLeft);
+            var interval=4 / 400;
+            var y1=[],y2=[];
+            var xAxis=[];
+            var x=-2;
+            for(var i=0;i<=400;i++){
+                var tempX=x+i*interval;
+                var tempY1=Math.sqrt(2*Math.abs(tempX)-tempX*tempX);
+                var tempY2=-2.14*Math.sqrt(Math.sqrt(2)-Math.sqrt(Math.abs(tempX)));
+                y1[i]=tempY1;
+                y2[i]=tempY2;
+                xAxis[i]='';
+            }
+            initTable(xAxis,y1,y2);
+        });
+</script>
+</body>
+</html>
